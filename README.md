@@ -67,7 +67,7 @@ Would you like to do view based testing? [ Yes / No ]
 ###
 s.description = '自已写描述信息'
 
-s.homepage = ‘https://github.com/xxx/MXTAlertView’
+s.homepage = ‘https://github.com/xxxxxx’
 
 s.author = { 'xxx' => 'xxx' }
 
@@ -99,7 +99,7 @@ cd 到 demo/MXTAlertView下，执行: pod lib lint --allow-warnings  (验证)
 ### 5、关联远程地址，并push到远程
 
 ###
-git remote add origin https://gitee.com/huangweiqiang-git/XTAlertView.git
+git remote add origin https://gitee.com/xxxxxx.git
 
 git add .
 
@@ -119,39 +119,39 @@ git push --tags
 
 ### 7、 最后把spec索引推送到cocoapod上
 
-pod repo push XTAlertView XTAlertView.podspec --allow-warnings
+pod repo push xxxxxx xxxxxx.podspec --allow-warnings
 
 
-如果提示MXTAlertView不存在问题，Unable to find the `MXTAlertView ` repo
+如果提示xxxxxx不存在问题，Unable to find the `xxxxxx ` repo
 
 
 执行：
 
- pod repo add XTAlertView https://gitee.com/huangweiqiang-git/XTAlertView.git
+ pod repo add xxxxxx https://gitee.com/xxxxxx.git
 
 
 ###其它：
 
 注册trunk
 
-pod trunk register 992689548@qq.com ‘huangwieiqiang‘ --description='Personal Laptop'
+pod trunk register xxxxxx@qq.com ‘xxxxxx‘ --description='Personal Laptop'
 
 用trunk提交：
 
-pod trunk push XTAlertView.podspec --allow-warnings
+pod trunk push xxxxxx.podspec --allow-warnings
 
 远程验证：
 
- pod spec lint --sources='http://192.168.2.10:9000/huangweiqiang/GItLog.git,https://github.com/CocoaPods/Specs.git' --verbose  
+ pod spec lint --sources='http://192.168.2.10:9000/xxxxxx.git,https://github.com/CocoaPods/Specs.git' --verbose  
  
 本地验证：
 
-pod spec lint --sources='http://192.168.2.10:9000/huangweiqiang/GItLog.git,https://github.com/CocoaPods/Specs.git' --verbose  
+pod spec lint --sources='http://192.168.2.10:9000/xxxxxx.git,https://github.com/CocoaPods/Specs.git' --verbose  
 
 
 推送的话：
 
-pod repo push MXTAlertView MXTAlertView.podspec --sources='https://github.com/hwq992689548/MXTAlertView.git,https://github.com/CocoaPods/Specs.git' --verbose
+pod repo push xxxxxx xxxxxx.podspec --sources='https://github.com/xxxxxx.git,https://github.com/CocoaPods/Specs.git' --verbose
 
  
 
@@ -162,6 +162,6 @@ pod repo push MXTAlertView MXTAlertView.podspec --sources='https://github.com/hw
 
 	需要在podfile里声明你的podspec仓库地址 source 'https://xxxxx.git' 
 
-	如： pod 'XTAlertView', :git => "https://gitee.com/huangweiqiang-git/XTAlertView"
+	如： pod 'xxxxxx', :git => "https://gitee.com/xxxxxx"
 
 ###
