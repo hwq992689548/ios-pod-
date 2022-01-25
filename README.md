@@ -1,5 +1,4 @@
 
-
 ### 自定义pod插件流程
 
 ### 1. 在github上创建仓库如TestPod， 创建完成后会显示创库地址：
@@ -100,7 +99,7 @@ cd 到 demo/MXTAlertView下，执行: pod lib lint --allow-warnings  (验证)
 ### 5、关联远程地址，并push到远程
 
 ###
-git remote add origin https://github.com/xxx/MXTAlertView.git
+git remote add origin https://gitee.com/huangweiqiang-git/XTAlertView.git
 
 git add .
 
@@ -120,44 +119,49 @@ git push --tags
 
 ### 7、 最后把spec索引推送到cocoapod上
 
-pod repo push MXTAlertView MXTAlertView.podspec --allow-warnings
+pod repo push XTAlertView XTAlertView.podspec --allow-warnings
 
 
 如果提示MXTAlertView不存在问题，Unable to find the `MXTAlertView ` repo
 
 
-执行： pod repo add MXTAlertView https://github.com/hwq992689548/MXTAlertView.git
+执行：
 
+ pod repo add XTAlertView https://gitee.com/huangweiqiang-git/XTAlertView.git
 
 
 ###其它：
 
+注册trunk
+
+pod trunk register 992689548@qq.com ‘huangwieiqiang‘ --description='Personal Laptop'
+
+用trunk提交：
+
+pod trunk push XTAlertView.podspec --allow-warnings
+
 远程验证：
 
- pod spec lint --sources='https://github.com/github名字/xxx.git,https://github.com/CocoaPods/Specs.git' --verbose  
-
+ pod spec lint --sources='http://192.168.2.10:9000/huangweiqiang/GItLog.git,https://github.com/CocoaPods/Specs.git' --verbose  
+ 
 本地验证：
 
-pod spec lint --sources='https://github.com/xxx/MXTAlertView.git,https://github.com/CocoaPods/Specs.git' --verbose  
+pod spec lint --sources='http://192.168.2.10:9000/huangweiqiang/GItLog.git,https://github.com/CocoaPods/Specs.git' --verbose  
+
 
 推送的话：
 
 pod repo push MXTAlertView MXTAlertView.podspec --sources='https://github.com/hwq992689548/MXTAlertView.git,https://github.com/CocoaPods/Specs.git' --verbose
 
+ 
 
+###
+    注：如果是用的非GitHub进行托管的（如gitlab），pod search 是搜不到的,
 
+	因为他是私有的（如果想开源给大家，那就上github，然后发布到开源库）
 
+	需要在podfile里声明你的podspec仓库地址 source 'https://xxxxx.git' 
 
+	如： pod 'XTAlertView', :git => "https://gitee.com/huangweiqiang-git/XTAlertView"
 
-
-
-
-
-
-
-
-
-
-
-
-
+###
